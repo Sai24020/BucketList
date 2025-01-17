@@ -1,0 +1,89 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4e9e3;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+  div {
+    display: block;
+}
+span,
+h3 {
+color: white;
+  }
+  h1 {
+    font-size: 2.5rem;
+    font-family: "Sacramento", cursive;
+     margin-bottom: 1px; 
+    margin-top: 1px;
+}
+}
+
+
+.task-container {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
+
+.task.completed {
+
+    text-decoration: line-through;
+  background-color: aqua;
+    opacity: 0.6;
+}
+
+button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.text-span {
+     margin-right: 3rem;
+}
+
+.done-btn {
+    background-color: green;
+    color: white;
+   margin-right: 3rem;
+}
+
+.delete-btn {
+    background-color: red;
+    color: white;
+     margin-right: 3rem;
+  cursor: pointer;
+}
+
+select, input, button {
+    font-size: 1rem;
+    padding: 8px;
+    margin: 5px;
+}
+
+
+
+.task,
+#bucketForm {
+display: flex;
+flex-direction: row;
+ justify-content: space-between;
+align-items: center;
+justify-content: center;
+max-width: 600px;
+margin: auto;
+padding: 20px;
+border: 1px solid #ddd;
+border-radius: 8px;
+background-color: hotpink;
+ height: 3rem;
+
+}
