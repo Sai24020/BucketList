@@ -1,6 +1,13 @@
+.playwrite-vn-<uniquifier> {
+    font-family: "Playwrite VN", serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+  }
+
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4e9e3;
+    background-color: #807874;
     color: #333;
     text-align: center;
     margin: 0;
@@ -17,7 +24,8 @@ color: white;
   }
   h1 {
     font-size: 2.5rem;
-    font-family: "Sacramento", cursive;
+    font-family: "Playwrite VN", cursive;
+   /* font-family: "Sacramento", cursive;*/
      margin-bottom: 1px; 
     margin-top: 1px;
 }
@@ -34,7 +42,7 @@ color: white;
 .task.completed {
 
     text-decoration: line-through;
-  background-color: aqua;
+  background-color: rgb(105, 164, 164);
     opacity: 0.6;
 }
 
