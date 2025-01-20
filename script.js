@@ -17,7 +17,7 @@ addTaskButton.addEventListener("click", () => {
     }
 
     // البحث عن القسم أو إنشاؤه إذا لم يكن موجودًا
-    //    Hitta eller skapa en partition om den inte finns
+    //    Hitta eller skapa en partition"categorySection" om den inte finns
 
     let categorySection = document.getElementById(`category-${category}`);
     if (!categorySection) {
@@ -29,7 +29,7 @@ addTaskButton.addEventListener("click", () => {
 
    
     // إنشاء المهمة
-   // Skapa uppgiften
+   // Skapa taskItem
 
     const taskItem = document.createElement("div");
     taskItem.className = "task";
@@ -52,8 +52,9 @@ addTaskButton.addEventListener("click", () => {
 
     deleteButton.addEventListener("click", () => {
         categorySection.removeChild(taskItem);
+        
         // إذا أصبح القسم فارغًا، يتم حذفه
-     //         Om partitionen blir tom tas den bort
+     //         Om partitionen"categorySection" blir tom tas den bort
 
         if (categorySection.children.length === 1) {
             taskList.removeChild(categorySection);
@@ -61,12 +62,12 @@ addTaskButton.addEventListener("click", () => {
     });
 
     // إضافة المهمة للقسم
- //     Lägg till uppgift i avsnitt
+ //     Lägg till taskItem i avsnitt"catergorySection"
 
     categorySection.appendChild(taskItem);
 
     // إعادة تعيين المدخلات
-   // Återställ ingång
+   // Återställ ingång"taskInput"
 
     taskInput.value = "";
 });
