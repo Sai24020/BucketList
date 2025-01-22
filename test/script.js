@@ -1,3 +1,4 @@
+
 // Initiera en tom array för aktiviteter
 let activities = JSON.parse(localStorage.getItem('activities')) || [];
 
@@ -11,41 +12,47 @@ function renderList() {
   categories.forEach(category => {
     const categoryActivities = activities.filter(activity => activity.category === category);
     categoryActivities.sort((a, b) => a.name.localeCompare(b.name)); // Sortera alfabetiskt
-
+    
+    console.log(category);
+//    renderList(categories);   In this example, the renderList function checks if the items variable is an array before calling forEach on it. If items is not an array, it logs an error message and exits the function.
     if (categoryActivities.length > 0) {
-      const categoryDiv = document.createElement('div');
-      const categoryHeader = document.createElement('h2');
-      categoryHeader.textContent = category;
-      categoryDiv.appendChild(categoryHeader);
+//      console.log(category);
 
+      const categoryHeader = document.createElement('h2');
       const ul = document.createElement('ul');
-      categoryActivities.forEach(activity => {
+
+      categoryHeader.classList.add('category-title');
+      categoryHeader.textContent = category;
+
+      ul.appendChild(categoryHeader);
+
+     
+      categoryActivities[category].forEach((activity) => {
         const li = document.createElement('li');
+        li.textContent = activity;
+
         li.classList.add(activity.completed ? 'completed' : '');
 
-        const span = document.createElement('span');
+        const span = document.createElement('.text-span');
         span.textContent = activity.name;
 
-        const editButton = document.createElement('button');
-        editButton.textContent = 'Redigera';
-        editButton.onclick = () => editActivity(activity);
+        const completeButton = document.createElement('.done-btn');
+        completeButton.textContent = 'V';
 
-        const deleteButton = document.createElement('button');
-        deleteButton.textContent = 'Ta bort';
+        const deleteButton = document.createElement('.delete-btn');
+        deleteButton.textContent = 'X';
         deleteButton.onclick = () => deleteActivity(activity);
 
-        const completeButton = document.createElement('button');
         completeButton.textContent = activity.completed ? 'Ångra' : 'Klar';
         completeButton.onclick = () => toggleComplete(activity);
 
         li.appendChild(span);
-        li.appendChild(editButton);
         li.appendChild(deleteButton);
         li.appendChild(completeButton);
         ul.appendChild(li);
       });
-      categoryDiv.appendChild(ul);
-      bucketLists.appendChild(categoryDiv);
+
+      bucketLists.appendChild(ul);
     }
   });
 }
