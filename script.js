@@ -4,6 +4,9 @@ const categorySelect = document.getElementById("categorySelect");
 const addTaskButton = document.getElementById("addTaskButton");
 const taskList = document.getElementById("taskList");
 
+//När sidan startar ,,Ladda taskItems från "Local Storage"
+//behöver koda sen för att uppdatera min project :)
+
 // عند الضغط على زر "Lägg till"
 //När du trycker på knappen "Lägg till"
 
@@ -59,6 +62,10 @@ addTaskButton.addEventListener("click", () => {
         if (categorySection.children.length === 1) {
             taskList.removeChild(categorySection);
         }
+
+//Save task to localStorage...behöver call function att spara taskItems till  "Local Storage"
+
+    
     });
 
     // إضافة المهمة للقسم
@@ -66,8 +73,16 @@ addTaskButton.addEventListener("click", () => {
 
     categorySection.appendChild(taskItem);
 
+      //Save task to localStorage
+     // Sen taskInput.value = ""
     // إعادة تعيين المدخلات
    // Återställ ingång"taskInput"
 
     taskInput.value = "";
 });
+
+
+//Skapa function  Save task to localStorage,,,,saveTasksToLS() med const tasks={} och sections= taskList.querySelectorAll("section")
+//sen  localStorage.setItem("tasks", JSON.stringify(tasks)) sen close function }
+
+//Och behöver skapa function to loadTasksFromLS   och skriva const tasks använda JSON.parse(localStorage.getItem("tasks")) och if statment
