@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 body {
     font-family: Arial, sans-serif;
     color: brown;
@@ -5,19 +7,20 @@ body {
   }
   #bucketLists div {
     margin-bottom: 20px;
-    background-color: brown;
+    background-color: rgb(162, 144, 144);
   }
   ul {
     list-style-type: none;
     padding: 0;
-    color: blue;
+    color: rgb(218, 108, 25);
   }
   li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 0;
-    color: blue;
+    color: rgb(25, 20, 3);
+    font-weight: bold;
   }
   button {
     margin-left: 10px;
@@ -29,19 +32,25 @@ body {
       display: block;
   }
   span {
-  color: rgb(211, 166, 166);
+  color: rgb(111, 13, 13);
   font-family: Arial, sans-serif;
   align-items: center;
   justify-content: center;
   margin-left: 4rem; 
-  margin-bottom: 0;
+  margin-bottom: 5rem;
+  line-height: 5.5rem;
+  font-weight: bold;
+font-size: large;
     }
     h1 {
       font-size: 2.5rem;
-      font-family: "Playwrite VN", cursive;
+      font-family: "homemade Apple", serif;
+      align-items: center;
+      justify-content: center;
      /* font-family: "Sacramento", cursive;*/
        margin-bottom: 1px; 
       margin-top: 1px;
+      line-height: 0;
   }
   }
   
